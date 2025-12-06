@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VibeConverter</title>
+  <link rel="icon" type="image/png" href="/logo.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            primary: "#f2cc0d",
+            "background-light": "#f8f8f5",
+            "background-dark": "#221f10",
+            border: "#181711",
+          },
+          fontFamily: {
+            display: ["Spline Sans", "sans-serif"],
+            grotesk: ["Space Grotesk", "sans-serif"],
+          },
+          boxShadow: {
+            'hard': '4px 4px 0px 0px #181711',
+            'hard-white': '4px 4px 0px 0px #ffffff',
+            'hard-sm': '2px 2px 0px 0px #181711',
+            'hard-sm-white': '2px 2px 0px 0px #ffffff',
+            'hard-xl': '8px 8px 0px 0px #181711',
+            'hard-xl-white': '8px 8px 0px 0px #ffffff',
+          }
+        },
+      },
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Spline Sans', sans-serif;
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body
+  class="bg-background-light dark:bg-background-dark text-[#181711] dark:text-[#f8f8f5] transition-colors duration-300">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
+</html>
