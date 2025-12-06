@@ -23,12 +23,11 @@ export const WEIRD_UNITS_DB: WeirdUnit[] = [
   { id: "blue_whale", name: "Blue Whales", unit_type: "mass", value_in_base_unit: 150000, base_unit: "kg", vibe_level: "high", emoji: "🐋" },
 
   // --- MASS: UNHINGED VIBE (Abstract/Extreme) ---
-  // Note: We map these to 'high' vibe_level so they appear when 'Unhinged' is selected
-  { id: "human_soul", name: "Human Souls (MacDougall Theory)", unit_type: "mass", value_in_base_unit: 0.021, base_unit: "kg", vibe_level: "high", emoji: "👻" },
-  { id: "titanic", name: "RMS Titanics", unit_type: "mass", value_in_base_unit: 52310000, base_unit: "kg", vibe_level: "high", emoji: "🚢" },
-  { id: "proton", name: "Protons", unit_type: "mass", value_in_base_unit: 1.67e-27, base_unit: "kg", vibe_level: "high", emoji: "⚛️" },
-  { id: "great_pyramid", name: "Great Pyramids of Giza", unit_type: "mass", value_in_base_unit: 5900000000, base_unit: "kg", vibe_level: "high", emoji: "🐫" },
-  { id: "internet", name: "The Entire Internet (Weight of Electrons)", unit_type: "mass", value_in_base_unit: 0.05, base_unit: "kg", vibe_level: "high", emoji: "💻" },
+  { id: "human_soul", name: "Human Souls (MacDougall Theory)", unit_type: "mass", value_in_base_unit: 0.021, base_unit: "kg", vibe_level: "unhinged", emoji: "👻" },
+  { id: "titanic", name: "RMS Titanics", unit_type: "mass", value_in_base_unit: 52310000, base_unit: "kg", vibe_level: "unhinged", emoji: "🚢" },
+  { id: "proton", name: "Protons", unit_type: "mass", value_in_base_unit: 1.67e-27, base_unit: "kg", vibe_level: "unhinged", emoji: "⚛️" },
+  { id: "great_pyramid", name: "Great Pyramids of Giza", unit_type: "mass", value_in_base_unit: 5900000000, base_unit: "kg", vibe_level: "unhinged", emoji: "🐫" },
+  { id: "internet", name: "The Entire Internet (Weight of Electrons)", unit_type: "mass", value_in_base_unit: 0.05, base_unit: "kg", vibe_level: "unhinged", emoji: "💻" },
 
   // --- LENGTH: LOW VIBE ---
   { id: "subway_footlong", name: "Subway Footlongs", unit_type: "length", value_in_base_unit: 0.3, base_unit: "meters", vibe_level: "low", emoji: "🥖" },
@@ -51,11 +50,11 @@ export const WEIRD_UNITS_DB: WeirdUnit[] = [
   { id: "blue_whale_length", name: "Blue Whales (Length)", unit_type: "length", value_in_base_unit: 24, base_unit: "meters", vibe_level: "high", emoji: "🐋" },
 
   // --- LENGTH: UNHINGED VIBE ---
-  { id: "everest", name: "Mount Everests", unit_type: "length", value_in_base_unit: 8848, base_unit: "meters", vibe_level: "high", emoji: "🏔️" },
-  { id: "mariana_trench", name: "Mariana Trenches (Depth)", unit_type: "length", value_in_base_unit: 11034, base_unit: "meters", vibe_level: "high", emoji: "🌊" },
-  { id: "dna", name: "Human DNA Strands (Uncoiled)", unit_type: "length", value_in_base_unit: 2.0, base_unit: "meters", vibe_level: "high", emoji: "🧬" },
-  { id: "light_nanosecond", name: "Light Nanoseconds", unit_type: "length", value_in_base_unit: 0.3, base_unit: "meters", vibe_level: "high", emoji: "⚡" },
-  { id: "great_wall", name: "Great Walls of China", unit_type: "length", value_in_base_unit: 21196000, base_unit: "meters", vibe_level: "high", emoji: "🧱" },
+  { id: "everest", name: "Mount Everests", unit_type: "length", value_in_base_unit: 8848, base_unit: "meters", vibe_level: "unhinged", emoji: "🏔️" },
+  { id: "mariana_trench", name: "Mariana Trenches (Depth)", unit_type: "length", value_in_base_unit: 11034, base_unit: "meters", vibe_level: "unhinged", emoji: "🌊" },
+  { id: "dna", name: "Human DNA Strands (Uncoiled)", unit_type: "length", value_in_base_unit: 2.0, base_unit: "meters", vibe_level: "unhinged", emoji: "🧬" },
+  { id: "light_nanosecond", name: "Light Nanoseconds", unit_type: "length", value_in_base_unit: 0.3, base_unit: "meters", vibe_level: "unhinged", emoji: "⚡" },
+  { id: "great_wall", name: "Great Walls of China", unit_type: "length", value_in_base_unit: 21196000, base_unit: "meters", vibe_level: "unhinged", emoji: "🧱" },
 ];
 
 export const STANDARD_UNITS: StandardUnit[] = [

@@ -1,6 +1,6 @@
 export type UnitType = 'mass' | 'length';
-export type VibeLevel = 'low' | 'medium' | 'high';
-export type UiVibe = 'Boring' | 'Quirky' | 'Unhinged';
+export type VibeLevel = 'low' | 'medium' | 'high' | 'unhinged';
+export type UiVibe = 'Boring' | 'Quirky' | 'Wild' | 'Unhinged';
 
 export interface WeirdUnit {
   id: string;

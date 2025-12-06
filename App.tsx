@@ -33,7 +33,7 @@ function App() {
 
     if (paramAmount) setAmount(paramAmount);
     if (paramUnit && STANDARD_UNITS.some(u => u.id === paramUnit)) setSelectedUnit(paramUnit);
-    if (paramVibe && ['Boring', 'Quirky', 'Unhinged'].includes(paramVibe)) setVibe(paramVibe);
+    if (paramVibe && ['Boring', 'Quirky', 'Wild', 'Unhinged'].includes(paramVibe)) setVibe(paramVibe);
 
     // If we have params, switch to app view immediately
     if (paramAmount || paramUnit || paramVibe) {
@@ -219,7 +219,7 @@ function App() {
           <div className="space-y-4">
             <h3 className="font-bold text-xl text-black dark:text-white">Creativity Level</h3>
             <div className="flex bg-[#f5f4f0] dark:bg-gray-900 border-4 border-black dark:border-[#f8f8f5] rounded-full p-2 gap-2 h-16 relative">
-              {(['Boring', 'Quirky', 'Unhinged'] as UiVibe[]).map((v) => (
+              {(['Boring', 'Quirky', 'Wild', 'Unhinged'] as UiVibe[]).map((v) => (
                 <label key={v} className="flex-1 relative cursor-pointer group">
                   <input
                     type="radio"

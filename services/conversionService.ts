@@ -5,14 +5,15 @@ export const mapUiVibeToLevel = (uiVibe: UiVibe): VibeLevel => {
   switch (uiVibe) {
     case 'Boring': return 'low';
     case 'Quirky': return 'medium';
-    case 'Unhinged': return 'high';
+    case 'Wild': return 'high';
+    case 'Unhinged': return 'unhinged';
   }
 };
 
 export const getWeirdUnit = (type: 'mass' | 'length', vibe: VibeLevel, excludeId?: string): WeirdUnit | null => {
   // Filter by type and vibe
   let candidates = WEIRD_UNITS_DB.filter(u => u.unit_type === type && u.vibe_level === vibe);
-  
+
   // If we have an exclusion and enough candidates to pick a different one, filter it out
   if (excludeId && candidates.length > 1) {
     candidates = candidates.filter(u => u.id !== excludeId);
@@ -24,7 +25,7 @@ export const getWeirdUnit = (type: 'mass' | 'length', vibe: VibeLevel, excludeId
     if (excludeId && fallback.length > 1) {
       fallback = fallback.filter(u => u.id !== excludeId);
     }
-    
+
     if (fallback.length === 0) return null;
     return fallback[Math.floor(Math.random() * fallback.length)];
   }
@@ -44,7 +45,7 @@ export const calculateConversion = (
 
   const baseValue = standardUnit.toBase(amount);
   const vibeLevel = mapUiVibeToLevel(vibe);
-  
+
   const targetUnit = getWeirdUnit(standardUnit.type, vibeLevel, excludeUnitId);
   if (!targetUnit) return null;
 
