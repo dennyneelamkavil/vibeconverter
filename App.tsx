@@ -156,9 +156,10 @@ function App() {
       {/* App Header */}
       <header className="border-b-4 border-black dark:border-[#f8f8f5] bg-white dark:bg-black px-4 md:px-8 py-4 flex items-center justify-between sticky top-0 z-20">
         <div className="flex items-center gap-3 cursor-pointer" onClick={() => setView('landing')}>
-          <div className="w-8 h-8 bg-black dark:bg-white rounded-full flex items-center justify-center text-primary dark:text-black">
+          {/* <div className="w-8 h-8 bg-black dark:bg-white rounded-full flex items-center justify-center text-primary dark:text-black">
             <span className="material-symbols-outlined">change_history</span>
-          </div>
+          </div> */}
+          <img src="/logo.png" alt="Logo" width={32} height={32} />
           <span className="text-xl font-black hidden sm:block text-black dark:text-white">VibeConverter</span>
         </div>
 
