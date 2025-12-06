@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
+import html2canvas from 'html2canvas';
 import { WeirdUnit, UiVibe } from '../types';
 import { STANDARD_UNITS } from '../constants';
 
@@ -11,6 +12,7 @@ interface ShareModalProps {
 
 export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, result, inputs }) => {
   const [copyLabel, setCopyLabel] = useState('Copy Link');
+  const cardRef = useRef<HTMLDivElement>(null);
 
   if (!isOpen || !result) return null;
 
@@ -29,8 +31,23 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, result,
     }
   };
 
-  const handleDownload = () => {
-    alert("Image download would start here! (Requires html2canvas implementation)");
+  const handleDownload = async () => {
+    if (!cardRef.current) return;
+
+    try {
+      const canvas = await html2canvas(cardRef.current, {
+        backgroundColor: null,
+        scale: 2, // Higher quality
+      });
+
+      const link = document.createElement('a');
+      link.download = `vibe-check-${inputs.amount}${inputs.unit}-to-${result.unit.name}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    } catch (err) {
+      console.error('Failed to generate image:', err);
+      alert('Failed to generate image. Try again?');
+    }
   };
 
   const formattedValue = result.value < 0.01
@@ -59,7 +76,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, result,
         </div>
 
         {/* Main Card */}
-        <div className="p-4 bg-white border-2 border-[#221f10] rounded-xl shadow-[8px_8px_0px_#221f10]">
+        <div ref={cardRef} className="p-4 bg-white border-2 border-[#221f10] rounded-xl shadow-[8px_8px_0px_#221f10]">
           <div className="flex flex-col items-stretch justify-start rounded-lg bg-white font-grotesk">
 
             {/* Hero Image Area (Dynamic based on Emoji) */}
