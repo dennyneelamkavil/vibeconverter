@@ -119,7 +119,7 @@ export function ConverterPage() {
                     <Button variant="icon" onClick={() => setIsHistoryOpen(true)}>
                         <span className="material-symbols-outlined">history</span>
                     </Button>
-                    <Button onClick={() => setIsAuthOpen(true)}>Sign In</Button>
+                    {/* <Button onClick={() => setIsAuthOpen(true)}>Sign In</Button> */}
                 </div>
             </header>
 
