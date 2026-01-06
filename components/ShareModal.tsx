@@ -111,7 +111,7 @@ export const ShareModal: React.FC<ShareModalProps> = ({ isOpen, onClose, result,
               </div>
 
               <div className="mt-2 text-center text-xs text-[#221f10]/50 font-mono">
-                vibeconverter.app
+                vibeconverter.dennynj.in
               </div>
             </div>
           </div>
