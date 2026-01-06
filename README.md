@@ -1,20 +1,63 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
 
-# Run and deploy your AI Studio app
+# 🍌 VibeConverter
 
-This contains everything you need to run your app locally.
+> **Stop measuring in boring meters. Start measuring in bananas, giraffes, and existential dread.**
 
-View your app in AI Studio: https://ai.studio/apps/drive/1kNNziJjonLZNDSaM0e8ihafeOJ0IbdLM
+VibeConverter is a whimsical unit converter that transforms standard measurements into weird, funny, and relatable objects based on your selected "vibe". 
 
-## Run Locally
+**Live Demo:** [https://vibeconverter.dennynj.in/](https://vibeconverter.dennynj.in/)
 
-**Prerequisites:**  Node.js
+## ✨ Features
 
+- **Weird Unit Conversion**: Convert mass and length into unconventional units like:
+  - 🍌 Bananas
+  - 🦒 Giraffe Necks
+  - 🍔 Burgers
+  - 🐘 Elephants
+  - And many more!
+- **Vibe Selector**: Choose your chaos level:
+  - **Boring**: Just the facts.
+  - **Quirky**: Fun and lighthearted.
+  - **Wild**: Getting strange.
+  - **Unhinged**: Absolute chaos.
+- **Deep Linking**: Share specific conversions via URL (e.g., `?amount=100&unit=kg&vibe=Unhinged`).
+- **History**: Keep track of your most absurd conversions.
+- **Save & Share**: Generate shareable images of your results using `html2canvas`.
+- **Dark Mode**: Fully supported system, light, and dark themes.
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## 🛠️ Tech Stack
+
+- **Framework**: React 19
+- **Build Tool**: Vite
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Routing**: React Router DOM
+- **Utilities**: html2canvas
+
+## 🚀 Run Locally
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/dennyneelamkavil/vibeconverter.git
+   cd vibeconverter
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+<p align="center">
+  Made with 🍌 by <a href="https://dennynj.in/">Denny N J</a>
+</p>
