@@ -265,6 +265,17 @@ export function ConverterPage() {
                 result={result}
                 inputs={{ amount, unit: selectedUnit, vibe }}
             />
+            <footer className="my-12 text-center text-sm font-bold opacity-30 text-black dark:text-white">
+                © 2026 VibeConverter. Stay weird. by{" "}
+                <a
+                    href="https://dennynj.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline hover:opacity-70"
+                >
+                    Denny N J
+                </a>
+            </footer>
         </div>
     );
 }
